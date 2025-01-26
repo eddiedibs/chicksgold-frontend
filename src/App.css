@@ -5,12 +5,7 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
@@ -39,4 +34,126 @@
 
 .read-the-docs {
   color: #888;
+}
+
+/*                 */
+/*                 */
+/*                 */
+/* reusable classes*/
+/*                 */
+/*                 */
+/*                 */
+
+.c-flex{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.c-w-full{
+  width: 100%;
+}
+
+.c-w-8{
+  width: 8rem;
+}
+.c-h-full{
+  height: 100%;
+}
+
+
+/*            */
+/*            */
+/*            */
+/* Navbar.css */
+/*            */
+/*            */
+/*            */
+
+.logo {
+  height: 2em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.navbar {
+  background-color: #333;
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #303141;
+  border-bottom: solid 1px #4c6085;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.navbar-parent{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50%;
+}
+
+.navbar-item {
+  margin-left: 1.5rem;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: #f0a500;
+}
+
+.navbar-parent{
+  width: 100vw;
+
+}
+
+.cart-icon{
+  padding-right: 0.4rem;
+}
+
+
+.sign-in-btn {
+  background-color: #39e29d; /* Primary blue color */
+  color: #303141; /* Text color */
+  border: none; /* Remove default border */
+  padding: 0.5rem 1rem; /* Space inside the button */
+  border-radius: 4px; /* Rounded corners */
+  font-size: 1rem; /* Font size */
+  font-weight: 500; /* Slightly bold text */
+  cursor: pointer; /* Change cursor to pointer */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+}
+
+.sign-in-btn:hover {
+  background-color: white; /* Darker blue on hover */
 }
