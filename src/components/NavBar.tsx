@@ -14,9 +14,11 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-container">
         <a href="/">
-          <img src={ChicksLogo} className="logo" alt="Chicks logo" />
+          <div className="c-flex">
+            <img src={ChicksLogo} className="logo" alt="Chicks logo" />
+            <div className="divider"></div>
+          </div>
         </a>
-        {/* <div className="navbar-logo">MyApp</div> */}
         <div className="navbar-parent">
           <ul className="navbar-menu">
             <li className="navbar-item">
@@ -58,8 +60,10 @@ const Navbar = () => {
           </ul>
           <ul className="navbar-menu">
             <li className="navbar-item">
-              <a href="/usd" className="navbar-link">USD</a>
+              <a href="/usd" className="navbar-link c-flex">
+              USD
               <DownArrow width="20" height="20" color="#ffffff"/>
+              </a>
             </li>
             <li className="navbar-item">
               <div className="c-flex">
