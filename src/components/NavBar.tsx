@@ -39,43 +39,43 @@ const Navbar = () => {
               </a>
             </li>
             <li className="navbar-item">
-              <a href="/items" className="navbar-link c-flex">
+              <a href="/" className="navbar-link c-flex">
               ITEMS
               <DownArrow width="20" height="20" color="#ffffff"/>
               </a>
             </li>
             <li className="navbar-item">
-              <a href="/accounts" className="navbar-link c-flex">
+              <a href="/" className="navbar-link c-flex">
               ACCOUNTS
               <DownArrow width="20" height="20" color="#ffffff"/>
               </a>
             </li>
             <li className="navbar-item">
-              <a href="/services" className="navbar-link c-flex">
+              <a href="/" className="navbar-link c-flex">
               SERVICES
               <DownArrow width="20" height="20" color="#ffffff"/>
               </a>
             </li>
             <li className="navbar-item">
-              <a href="/swap" className="navbar-link c-flex">
+              <a href="/" className="navbar-link c-flex">
               SWAP
               <DownArrow width="20" height="20" color="#ffffff"/>
               </a>
             </li>
             <li className="navbar-item">
-              <a href="/sell" className="navbar-link c-flex">
+              <a href="/" className="navbar-link c-flex">
               SELL
               <DownArrow width="20" height="20" color="#ffffff"/>
               </a>
             </li>
             <li className="navbar-item navbar-currency-link">
-              <a href="/usd" className="navbar-link">
+              <a href="/" className="navbar-link">
               USD
               <DownArrow width="20" height="20" color="#ffffff"/>
               </a>
             </li>
             <div className="c-flex" >
-              <a href="/cart" className="navbar-link c-flex">
+              <a href="/" className="navbar-link c-flex">
               <CartIcon width="20" height="20" color="#ffffff" className="cart-icon"/>
               CART ({cartCount})</a>
             </div>
