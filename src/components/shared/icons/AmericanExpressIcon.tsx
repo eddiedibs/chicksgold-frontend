@@ -1,5 +1,3 @@
-import React from "react";
-
 const AmericanExpressIcon = ({ width = "24", height = "24", ...props }) => {
     return (
         <svg

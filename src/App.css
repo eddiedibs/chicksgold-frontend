@@ -1007,9 +1007,6 @@
     margin-left: 0;
   }
 
-  .body-end{
-    height: 150vh;
-  }
 
   .filter-container{
     flex-direction: column;
@@ -1041,9 +1038,6 @@
 
 
 @media (max-width: 960px) and (max-height: 1200px){
-  .body-end{
-    height: 260vh;
-  }
   .table-content{
     display: flex;
     justify-content: center;

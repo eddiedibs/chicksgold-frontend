@@ -1,4 +1,3 @@
-import React from "react";
 
 const FeatherIcon = ({ width = "24", height = "24", color = "currentColor", ...props }) => {
   return (

@@ -1,4 +1,3 @@
-import React from "react";
 
 const FacebookIcon = ({ width = "24", height = "24", ...props }) => {
     return (

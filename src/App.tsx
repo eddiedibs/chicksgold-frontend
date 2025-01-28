@@ -6,8 +6,8 @@ import { CartProvider } from "./context/CartContext";
 import { useEffect, useState, useRef } from 'react';
 
 function App() {
-  const mainContainerRef = useRef(null); // Reference to .main-container
   const [bodyEndHeight, setBodyEndHeight] = useState("100%"); // Initial height of .body-end
+  const mainContainerRef = useRef<HTMLDivElement>(null); // Correctly typed ref
 
   useEffect(() => {
     const updateBodyEndHeight = () => {

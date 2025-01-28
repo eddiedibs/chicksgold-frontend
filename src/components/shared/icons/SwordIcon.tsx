@@ -1,5 +1,3 @@
-import React from "react";
-
 const SwordIcon = ({ width = "24", height = "24", color = "currentColor", ...props }) => {
   return (
     <svg

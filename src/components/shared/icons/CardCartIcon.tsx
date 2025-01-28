@@ -1,4 +1,3 @@
-import React from "react";
 
 const CardCartIcon = ({ width = "24", height = "24", color = "currentColor", ...props }) => {
   return (

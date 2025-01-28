@@ -1,8 +1,7 @@
 
-import BackgroundImage from '../assets/fantasy1.jpeg'
 import Filters from "./Filters"
 import Table from "./Table"
-import React from "react";
+;
 
 interface BodyProps {
   mainContainerRef: React.RefObject<HTMLDivElement>; // Type for the ref

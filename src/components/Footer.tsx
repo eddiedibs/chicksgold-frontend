@@ -1,7 +1,4 @@
 
-import BackgroundImage from '../assets/fantasy1.jpeg'
-import Filters from "./Filters"
-import Table from "./Table"
 import VisaIcon from "./shared/icons/VisaIcon"
 import MasterCardIcon from "./shared/icons/MasterCardIcon"
 import AmericanExpressIcon from "./shared/icons/AmericanExpressIcon"

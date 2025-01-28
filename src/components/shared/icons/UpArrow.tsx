@@ -1,4 +1,3 @@
-import React from "react";
 
 const UpArrow = ({ width = "24", height = "24", color = "currentColor", ...props }) => {
   return (

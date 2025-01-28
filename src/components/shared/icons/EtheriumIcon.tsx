@@ -1,4 +1,3 @@
-import React from "react";
 
 const EtheriumIcon = ({ width = "24", height = "24", ...props }) => {
     return (

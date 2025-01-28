@@ -5,7 +5,7 @@ import MoneyBagIcon from "./shared/icons/MoneyBagIcon"
 import FeatherIcon from "./shared/icons/FeatherIcon"
 import MagnifyingGlassIcon from "./shared/icons/MagnifyingGlassIcon"
 import Dropdown from "./shared/icons/Dropdown"
-import React, { useState } from "react";
+import { useState } from "react";
 
 const Filters = () => {
   const [selectedGameOption, setSelectedGameOption] = useState("Select a game");
