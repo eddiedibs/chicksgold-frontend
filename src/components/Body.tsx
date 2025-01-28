@@ -1,24 +1,27 @@
 
 import Filters from "./Filters"
 import Table from "./Table"
-;
+import Footer from './Footer';
 
-interface BodyProps {
-  mainContainerRef: React.RefObject<HTMLDivElement>; // Type for the ref
-}
 
-const Body: React.FC<BodyProps> = ({ mainContainerRef }) => {
+
+const Body = () => {
   return (
-    <section className="main-container" ref={mainContainerRef}>
+    <section className="main-container">
         <div className='bg-img-front'></div>
         <img className='bg-img'/>
-        <div className='main-inner-container'>
-          <div className='main-content-container'>
-              <div className='title-container'>
-                  <h1 className='title'>Condimentum Consecteur</h1>
-              </div>
-              <Filters/>
-              <Table/>
+        <div className="body-main">
+          <div className='main-inner-container'>
+            <div className='main-content-container'>
+                <div className='title-container'>
+                    <h1 className='title'>Condimentum Consecteur</h1>
+                </div>
+                <Filters/>
+                <Table/>
+            </div>
+          </div>
+          <div className="footer-parent">
+            <Footer />
           </div>
         </div>
         
