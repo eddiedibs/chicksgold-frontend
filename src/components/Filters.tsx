@@ -3,6 +3,8 @@ import DownArrow from "./shared/DownArrow"
 import SwordIcon from "./shared/SwordIcon"
 import MoneyBagIcon from "./shared/MoneyBagIcon"
 import FeatherIcon from "./shared/FeatherIcon"
+import MagnifyingGlassIcon from "./shared/MagnifyingGlassIcon"
+import Dropdown from "./shared/Dropdown"
 import React, { useState } from "react";
 
 const Filters = () => {
@@ -10,36 +12,9 @@ const Filters = () => {
   const [selectedPriceOption, setSelectedPriceOption] = useState("Select a price");
   const [selectedTypeOption, setSelectedTypeOption] = useState("Select a type");
 
-    interface DropdownProps {
-    dropdownId: string;  
-    options: string[];    
-    setSelectedOptionHandler: typeof setSelectedGameOption;    
-  }
-
-  const Dropdown: React.FC<DropdownProps> = ({ dropdownId, options, setSelectedOptionHandler }) =>  {
-  
-    const handleSelect = (option: string) => {
-      setSelectedOptionHandler(option); 
-    };
-  
-    return (
-        <ul className={`dropdown-menu dropdown ${dropdownId}`}>
-                {options.map((option, index) => (
-                    <li 
-                    key={index} 
-                    className="dropdown-item" 
-                    onClick={() => handleSelect(option)}
-                    >
-                    {option}
-                    </li>
-                ))}
-        </ul>
-    );
-  };
-
   return (
     <div className='filter-container'>
-        <div className="game-dropdown">
+        <div className="game-dropdown" style={{ marginRight:'10px' }}>
             <button className="dropdown-btn">
                 <div className="dropdown-inner-btn">
                 <SwordIcon width="20" height="20" color="#ffffff" />
@@ -51,16 +26,21 @@ const Filters = () => {
             </button>
             <Dropdown dropdownId="gameDropdown" options={["Option 1", "Option 2", "Option 3"]} setSelectedOptionHandler={setSelectedGameOption} />
         </div>
-        <div className="search-filter-bar">
+        <div className="search-filter-bar" style={{ marginLeft:'10px' }}>
+            <MagnifyingGlassIcon className="" width="20" height="20" color="#ffffff"/>
             <input type="text" placeholder="Search..." className="search-input" />
         </div>
         <div className="game-feat-dropdown">
             <button className="dropdown-btn">
                 <div className="dropdown-inner-btn">
                     <MoneyBagIcon className="" width="30" height="30" color="#3cc898"/>
-                    <p style={{ marginLeft:'10px' }}>
-                    {selectedPriceOption}
-                    </p>
+                    <div>
+                        <label className="dropdown-label">Price</label>
+                        <p style={{ margin:'0 10px', fontSize: "0.9rem" }}>
+                        {selectedPriceOption}
+                        </p>
+                    </div>
+                    
                 </div>
                 <div>
                     <DownArrow className="" width="20" height="20" color="#ffffff"/>
@@ -73,9 +53,12 @@ const Filters = () => {
             <button className="dropdown-btn">
                 <div className="dropdown-inner-btn">
                     <FeatherIcon className="" width="20" height="20" color="#3cc898"/>
-                    <p style={{ marginLeft:'10px' }}>
-                    {selectedTypeOption}
-                    </p>
+                    <div>
+                        <label className="dropdown-label">Item type</label>
+                        <p style={{ margin:'0 10px', fontSize: "0.9rem" }}>
+                        {selectedTypeOption}
+                        </p>
+                    </div>
                 </div>
                 <div>
                     <DownArrow className="" width="20" height="20" color="#ffffff"/>

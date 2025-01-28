@@ -1,0 +1,60 @@
+{
+    "items": [
+      {
+        "isOnSale": true,
+        "totalQuantity": 20,
+        "isInStock": true,
+        "title": "Tal Rasha's Guardianship",
+        "image": "diablo2_item1.png",
+        "itemTypeIcon": "./assets/icons/diablo2_item.png",
+        "discountPrice": 4.99,
+        "originalPrice": 6.00,
+        "description": "Part of the Tal Rasha's set, this chest piece provides high defense and multiple bonuses when combined with other set pieces."
+      },
+      {
+        "isOnSale": false,
+        "totalQuantity": 20,
+        "isInStock": true,
+        "title": "Tal Belt 10-14% Magic Find",
+        "image": "diablo2_item2.png",
+        "itemTypeIcon": "./assets/icons/armor-icon.png",
+        "discountPrice": null,
+        "originalPrice": 1.49,
+        "description": "This belt from the Tal set is a great asset for magic find character builds. "
+      },
+      {
+        "isOnSale": true,
+        "totalQuantity": 30,
+        "isInStock": true,
+        "title": "Tal Orb 2 Cold",
+        "image": "diablo2_item3.png",
+        "itemTypeIcon": "./assets/icons/potion-icon.png",
+        "discountPrice": 4.99,
+        "originalPrice": 5.99,
+        "description": "This orb boosts cold skills and is part of the Tal Rasha's set. Ideal for cold-based sorceress builds."
+      },
+      {
+        "isOnSale": false,
+        "totalQuantity": 10,
+        "isInStock": true,
+        "title": "Andariel's Visage",
+        "image": "diablo2_item4.png",
+        "itemTypeIcon": "./assets/icons/staff-icon.png",
+        "discountPrice": null,
+        "originalPrice": 99.99,
+        "description": "Channel magical energy through this ancient staff."
+      },
+      {
+        "isOnSale": true,
+        "totalQuantity": 30,
+        "isInStock": true,
+        "title": "Paladin Hellfire Torch (10-13/10-13)",
+        "image": "diablo2_item5.png",
+        "itemTypeIcon": "./assets/icons/boots-icon.png",
+        "discountPrice": null,
+        "originalPrice": 2.49,
+        "description": "The Hellfire Torch is a unique Large Charm which is the reward for the completion of the Pandemonium Event. Only one may be in the inventory at a time. This version offers +3 to Palladin's Skill Levels."
+      }
+    ]
+  }
+  

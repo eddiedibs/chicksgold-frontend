@@ -11,7 +11,10 @@ function App() {
     <div className='navbar-parent'>
       <NavBar/>
     </div>
-    <Body/>
+    <div className='body-parent'>
+      <Body/>
+    </div>
+    <div className='footer-container'></div>
     </>
   )
 }
