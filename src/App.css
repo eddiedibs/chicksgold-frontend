@@ -1037,7 +1037,7 @@
 }
 
 
-@media (max-width: 960px) and (max-height: 1200px){
+@media (max-width: 960px){
   .table-content{
     display: flex;
     justify-content: center;
@@ -1058,6 +1058,10 @@
   }
   .footer-payment-logos{
     flex-wrap: wrap;
+  }
+  .main-inner-container{
+    margin-left: 0;
+    margin-right: 0;
   }
 
 }
