@@ -15,7 +15,7 @@ You can explore the project in action through the [Here](https://chicksgold-fron
 ## Getting Started  🚀
 
 
-This project was developed using a combination of tools and programming languages to ensure a fast, efficient, and reliable implementation. Vite was used as the build tool, providing a modern and high-performance development environment. The core technologies included React, JavaScript, and CSS. React offered a structured approach for building the application's components, JavaScript added interactivity and dynamic functionality, and CSS was used to handle the visual design and layout. These technologies are widely recognized and commonly used in the web development industry, ensuring the project's long-term compatibility and maintainability.
+This project was developed using a combination of tools and programming languages to ensure a fast, efficient, and reliable implementation. Vite was used as the build tool, providing a modern and high-performance development environment. The core technologies included React, Typescript, and CSS. React offered a structured approach for building the application's components, Typescript added interactivity and dynamic functionality, and CSS was used to handle the visual design and layout. These technologies are widely recognized and commonly used in the web development industry, ensuring the project's long-term compatibility and maintainability.
 
 To run the project, follow these steps:
 
