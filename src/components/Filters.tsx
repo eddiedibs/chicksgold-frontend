@@ -1,10 +1,10 @@
 
-import DownArrow from "./shared/DownArrow"
-import SwordIcon from "./shared/SwordIcon"
-import MoneyBagIcon from "./shared/MoneyBagIcon"
-import FeatherIcon from "./shared/FeatherIcon"
-import MagnifyingGlassIcon from "./shared/MagnifyingGlassIcon"
-import Dropdown from "./shared/Dropdown"
+import DownArrow from "./shared/icons/DownArrow"
+import SwordIcon from "./shared/icons/SwordIcon"
+import MoneyBagIcon from "./shared/icons/MoneyBagIcon"
+import FeatherIcon from "./shared/icons/FeatherIcon"
+import MagnifyingGlassIcon from "./shared/icons/MagnifyingGlassIcon"
+import Dropdown from "./shared/icons/Dropdown"
 import React, { useState } from "react";
 
 const Filters = () => {
@@ -14,7 +14,7 @@ const Filters = () => {
 
   return (
     <div className='filter-container'>
-        <div className="game-dropdown" style={{ marginRight:'10px' }}>
+        <div className="game-dropdown">
             <button className="dropdown-btn">
                 <div className="dropdown-inner-btn">
                 <SwordIcon width="20" height="20" color="#ffffff" />
@@ -26,7 +26,7 @@ const Filters = () => {
             </button>
             <Dropdown dropdownId="gameDropdown" options={["Option 1", "Option 2", "Option 3"]} setSelectedOptionHandler={setSelectedGameOption} />
         </div>
-        <div className="search-filter-bar" style={{ marginLeft:'10px' }}>
+        <div className="search-filter-bar">
             <MagnifyingGlassIcon className="" width="20" height="20" color="#ffffff"/>
             <input type="text" placeholder="Search..." className="search-input" />
         </div>

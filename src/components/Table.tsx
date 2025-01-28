@@ -1,28 +1,28 @@
 import React, { useEffect, useState } from "react";
-import Card from "./shared/Card"; // Assuming Card is your component that displays item details
-import itemsData from "../data/items/items.json"; // Import JSON data
+import Card from "./shared/Card"; 
+import itemsData from "../data/items/items.json"; 
 import Paginator from "./shared/Paginator";
 import TuneIcon from '@mui/icons-material/Tune';
-import DownArrow from "./shared/DownArrow"
-import Dropdown from "./shared/Dropdown"
+import DownArrow from "./shared/icons/DownArrow"
+import Dropdown from "./shared/icons/Dropdown"
+import { useCart } from "../context/CartContext";
 
 const Table: React.FC = () => {
   const [items, setItems] = useState<typeof itemsData["items"]>([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedCustomFilter, setSelectedCustomFilter] = useState("Featured");
-  const itemsPerPage = 5; // Number of items per page
-
+  const itemsPerPage = 5; 
+  const { addToCart } = useCart();
   useEffect(() => {
-    // Resolve the image paths dynamically when the component is mounted
     const loadImages = async () => {
       const updatedItems = await Promise.all(
         itemsData["items"].map(async (item) => {
           try {
             const imageUrl = new URL(`../assets/${item.image}`, import.meta.url).href;
-            return { ...item, image: imageUrl }; // Dynamically add the image URL to the item
+            return { ...item, image: imageUrl }; 
           } catch (error) {
             console.error("Error loading image:", error);
-            return item; // Return item without image on error
+            return item; 
           }
         })
       );
@@ -32,7 +32,6 @@ const Table: React.FC = () => {
     loadImages();
   }, []);
 
-  // Calculate the current items to display based on pagination
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = items.slice(indexOfFirstItem, indexOfLastItem);
@@ -44,15 +43,15 @@ const Table: React.FC = () => {
   return (
     <div className="table-parent">
       <div className="table-header">
-        <span style={{ marginLeft:'40px' }}>
+        <span className="table-header-span">
           Showing {itemsPerPage} - from {items.length}
         </span>
-        <div className="custom-filter" style={{ marginRight:'40px' }}>
+        <div className="custom-filter">
             <button className="custom-filter-btn">
               <TuneIcon style={{ zIndex: "3", color: "#39e29d" }} width="20" height="20" />
                 <div className="custom-filter-inner-btn">
                   <label className="dropdown-label">Sort by</label>
-                  <span style={{ marginLeft: '10px' }}>{selectedCustomFilter}</span>
+                  <span className="dropdown-custom-filter">{selectedCustomFilter}</span>
                 </div>
                 <div>
                     <DownArrow className="" width="20" height="20" color="#ffffff"/>
@@ -68,7 +67,7 @@ const Table: React.FC = () => {
             key={index}
             title={item.title}
             description={item.description}
-            image={item.image} // assuming path is correct
+            image={item.image} 
             isOnSale={item.isOnSale}
             totalQuantity={item.totalQuantity}
             originalPrice={item.originalPrice}
@@ -76,7 +75,7 @@ const Table: React.FC = () => {
             detailsActionText="DETAILS"
             paymentActionText="ADD"
             onDetailsActionClick={() => alert("Details clicked!")}
-            onPaymentActionClick={() => alert("Add clicked!")}
+            onPaymentActionClick={(selectedQuantity) => addToCart(selectedQuantity)}
           />
         ))}
       </div>

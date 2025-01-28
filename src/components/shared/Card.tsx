@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import LineSpan from "./LineSpan";
-import CardCartIcon from "./CardCartIcon";
-import QuantityInput from "./QuantityInput";
+import CardCartIcon from "./icons/CardCartIcon";
+import QuantityInput from "./icons/QuantityInput";
 
 interface CardProps {
     title: string;
@@ -14,7 +14,7 @@ interface CardProps {
     detailsActionText: string;
     paymentActionText: string;
     onDetailsActionClick: () => void;
-    onPaymentActionClick: () => void;
+    onPaymentActionClick: (quantity: number) => void;
   }
 
   const Card: React.FC<CardProps> = ({ 
@@ -78,7 +78,16 @@ interface CardProps {
                 <button className="details-btn" onClick={onDetailsActionClick}>
                     {detailsActionText}
                 </button>
-                <button className="buy-btn" onClick={onPaymentActionClick}>
+                <button className="buy-btn" 
+                onClick={() => {
+                    if (quantity === 0) {
+                      alert("Please select a quantity greater than 0 before proceeding.");
+                    } else {
+                      onPaymentActionClick(quantity);
+                    }
+                  }}
+                
+                >
                     <span>
                         {paymentActionText}
                     </span>

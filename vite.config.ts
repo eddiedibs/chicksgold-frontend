@@ -9,4 +9,5 @@ export default defineConfig({
       '@mui/icons-material': '@mui/icons-material',
     },
   },
+
 })

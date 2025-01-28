@@ -2,11 +2,15 @@
 import BackgroundImage from '../assets/fantasy1.jpeg'
 import Filters from "./Filters"
 import Table from "./Table"
+import React from "react";
 
-const Body = () => {
+interface BodyProps {
+  mainContainerRef: React.RefObject<HTMLDivElement>; // Type for the ref
+}
 
+const Body: React.FC<BodyProps> = ({ mainContainerRef }) => {
   return (
-    <section className='main-container'>
+    <section className="main-container" ref={mainContainerRef}>
         <div className='bg-img-front'></div>
         <img className='bg-img'/>
         <div className='main-inner-container'>
